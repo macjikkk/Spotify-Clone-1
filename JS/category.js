@@ -132,7 +132,7 @@ for (const card of playlistCards) {
       localStorage.setItem("playlist", JSON.stringify(playlistObj));
       localStorage.setItem("tracks", JSON.stringify(tracks));
 
-      location.href = "http://localhost:8080/tracksPage.html";
+      location.href = "https://macjik.github.io/Spotify-Clone/tracksPage.html";
     };
     tracks();
   });
