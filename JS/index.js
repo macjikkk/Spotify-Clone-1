@@ -155,7 +155,7 @@ const APIController = (function () {
                   const jsonItems = json.items;
 
                   localStorage.setItem("Tracks", JSON.stringify(jsonItems));
-                  location.href = "http://localhost:8080/homeTracks.html";
+                  location.href = "https://macjik.github.io/Spotify-Clone/homeTracks.html";
                 };
                 syncPlaylistTracks();
               });
@@ -205,9 +205,6 @@ const synchronize = async () => {
 };
 synchronize();
 
-searchSection.addEventListener("click", () => {
-  location.href = "http://localhost:8080/spotifySearchPage.html";
-});
 
 const tooltipTriggerList = [].slice.call(
   document.querySelectorAll('[data-bs-toggle="tooltip"]')
