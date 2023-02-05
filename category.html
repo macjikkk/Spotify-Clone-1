@@ -4,22 +4,49 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./stylesheets/category.css">
+    <link rel="stylesheet" href="./stylesheets/spotifySearchPage.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <title>Categories/Playlists</title>
+    <title>Search</title>
   </head>
   <body>
     <nav
       class="navbar navbar-expand-lg pb-3 navbar-dark nav-rib font-monospace ms-auto fixed-top"
       style="height: 64px"
     >
+      <div class="input-group rounded w-25">
+        <input
+          type="search"
+          class="form-control rounded-pill search-input border-dark"
+          placeholder="What do you want to listen to?"
+          aria-label="Search"
+          aria-describedby="search-addon"
+          style="position: relative; right: 70px; width: 360px; top: 12px"
+        />
+        <svg
+          role="img"
+          style="position: relative; left: -55px; top: -20px"
+          height="24"
+          width="24"
+          aria-hidden="true"
+          class="Svg-sc-ytk21e-0 uPxdw mOLTJ2mxkzHJj6Y9_na_"
+          viewBox="0 0 24 24"
+          data-encore-id="icon"
+        >
+          <path
+            fill="black"
+            d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 101.414-1.414l-4.344-4.344a9.157 9.157 0 002.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"
+          ></path>
+        </svg>
+      </div>
       <div class="container-fluid">
-
+        <!-- animateFill: true -->
+        <!-- arrow: true -->
+      </div>
     </nav>
     <nav class="container-fluid side-ting">
       <div
@@ -57,7 +84,10 @@
               id="menu"
             >
               <li class="nav-item" id="home">
-                <a href="http://localhost:8080/index.html" class="nav-link align-middle px-0">
+                <a
+                  href="https://macjik.github.io/Spotify-Clone/"
+                  class="nav-link align-middle px-0"
+                >
                   <svg
                     role="img"
                     style="position: relative; right: 8px"
@@ -82,7 +112,10 @@
                 </a>
               </li>
               <li>
-                <a href="http://localhost:8080/spotifySearchPage.html" class="nav-link px-0 align-middle">
+                <a
+                  href="https://macjik.github.io/Spotify-Clone/spotifySearchPage.html"
+                  class="nav-link px-0 align-middle"
+                >
                   <svg
                     role="img"
                     style="position: relative; right: 8px"
@@ -134,10 +167,12 @@
                       <span class="d-none d-sm-inline" style="font-weight: bold"
                         >Your Library</span
                       >
-                      <div id="template" style="display: none">
-                        <strong>Work in process</strong>
-                      </div>
                     </a>
+                    <div id="template" style="display: none">
+                      <strong style="font-weight: bolder"
+                        >Work in process</strong
+                      >
+                    </div>
                   </li>
                   <br />
                   <li class="w-100 create-playlist-tip-content">
@@ -191,7 +226,7 @@
                   ></a
                 >
                 <div id="template" style="display: none">
-                  <strong>Work in progress</strong>
+                  <strong>Work in process</strong>
                 </div>
               </li>
             </ul>
@@ -200,10 +235,33 @@
         </div>
       </div>
     </nav>
-    <div class="results">
-      <div class="bg"></div>
-    </div>
     <!--insert: Browse All-->
+    <div class="result-div">
+      <h1
+        style="
+          color: white;
+          text-align: left;
+          font-size: 23px;
+          left: 255px;
+          font-weight: bolder;
+          position: relative;
+          top: 120px;
+          height: 100px;
+        "
+      >
+        Browse all
+      </h1>
+      <ul
+        class="result"
+        style="
+          margin-bottom: 115px;
+          position: relative;
+          bottom: 120px;
+          left: 10px;
+        "
+      ></ul>
+      <ul id="tracks-result"></ul>
+    </div>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script src="https://raw.githubusercontent.com/requirejs/text/latest/text.js"></script>
@@ -221,5 +279,5 @@
   ></script>
   <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
   <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
-  <script src="./JS/category.js"></script>
+  <script src="./JS/spotifySearchPage.js"></script>
 </html>
