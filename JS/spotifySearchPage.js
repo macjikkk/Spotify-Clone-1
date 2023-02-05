@@ -192,7 +192,7 @@ const APIController = (function () {
                 ); //playlists
                 const dataTing = await fetchDataURL.json();
                 const playlistsData = dataTing.playlists.items;
-                location.href = "http://localhost:8080/category.html";
+                location.href = "https://macjik.github.io/Spotify-Clone/category.html";
                 localStorage.setItem(
                   "categoryPlaylists",
                   JSON.stringify(playlistsData)
@@ -242,7 +242,7 @@ const APIController = (function () {
                 localStorage.setItem("trackData", JSON.stringify(trackNames));
                 console.log(trackNames);
 
-                location.href = "http://localhost:8080/searchTracksPage.html";
+                location.href = "https://macjik.github.io/Spotify-Clone/searchTracksPage.html";
               };
               syncTracks();
             });
